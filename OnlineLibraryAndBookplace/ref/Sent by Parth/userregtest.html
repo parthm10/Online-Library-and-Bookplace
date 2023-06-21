@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>User Registration</title>
+
+    <link rel="icon" href="images/AppIcon.png">
+
+    <style>
+        #em_err {
+            color: red;
+            font-weight: 600;
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <div class="form">
+            <div class="title">User Registration</div>
+
+
+            <div class="input-container ic2">
+                <input id="uname" class="input" type="text" placeholder=" " required />
+                <div class="cut cut-short" style="width: 80px;"></div>
+                <label for="uname" class="placeholder">Username</label>
+            </div>
+
+            <div class="input-container ic2">
+                <input id="umail" class="input" type="text" placeholder=" "
+                    pattern="[A-Za-z0-9]{2,}@[a-z]{2,}.[a-z]{2,}$" id="email" name="lib_mail" required />
+                <div class="cut cut-short" style="width: 55px;"></div>
+                <label for="umail" class="placeholder">Email</label>
+                <p id="em_err">Invalid Email</p>
+            </div>
+
+            <div class="input-container ic2">
+                <input id="upass" class="input" type="password" placeholder=" " required />
+                <div class="cut cut-short" style="width: 75px;"></div>
+                <label for="upass" class="placeholder">Password</label>
+            </div>
+
+            <button type="text" class="submit">Register</button>
+
+        </div>
+    </form>
+
+    <script>
+        function validate_pass() {
+
+            if (document.form.pas.value != document.form.cpas.value) {
+                alert("Please Check Your Password");
+                document.form.cpas.focus();
+                return false;
+            }
+        }
+        document.getElementById("bhcpas").addEventListener("keyup", () => {
+            validate_pass();
+        }, false);
+
+        function validate_phone() {
+            if (!(document.form.pno.value.match(/^[6789]\d{9}$/))) {
+                alert("Enter Valid Phone Number");
+                document.form.pno.focus();
+                return false;
+            }
+        }
+        document.getElementById("bhcpas").addEventListener("keyup", () => {
+            validate_phone();
+        }, false);
+
+        function validate_pincode() {
+            if (!(document.form.pinc.value.match(/\d{6}$/))) {
+                alert("Enter Valid Pincode Number");
+                document.form.pinc.focus();
+                return false;
+            }
+        }
+        document.getElementById("bhcpas").addEventListener("keyup", () => {
+            validate_pincode();
+        }, false);
+    </script>
+
+
+</body>
+
+</html>

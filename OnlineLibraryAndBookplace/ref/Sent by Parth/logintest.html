@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>Login</title>
+
+    <link rel="icon" href="images/AppIcon.png">
+
+</head>
+<body>
+    <form>
+        <div class="form">
+            <div class="title">User Registration</div>
+
+
+            <div class="input-container ic2">
+                <input id="umail" class="input" type="text" placeholder=" " pattern="[A-Za-z0-9]{2,}@[a-z]{2,}.[a-z]{2,}$" id="email" name="umail" required />
+                <div class="cut cut-short" style="width: 55px;"></div>
+                <label for="umail" class="placeholder">Email</label>
+            </div>
+
+            <div class="input-container ic2">
+                <input id="upass" class="input" type="password" placeholder=" " required />
+                <div class="cut cut-short" style="width: 75px;"></div>
+                <label for="upass" class="placeholder">Password</label><br>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember">Remember me<br>
+                </label>
+            </div>
+
+            <button type="text" class="submit">Login</button>
+        </div>
+    </form>
+    
+</body>
+</html>

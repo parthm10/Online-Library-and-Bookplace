@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Book Host</h3>
+    <table>
+        
+    <form action="bookHostAction.php" name="form" onsubmit="return validate()">
+    <tr>
+        <td><label for="name">Name</label></td>
+        <td><input type="text" name="name" id="name" required></td>
+    </tr>
+    <tr>
+        <td><label for="email">Email</label></td>
+        <td><input type="email" name="email" id="email" required></td>
+    </tr>
+    <tr>
+        <td><label for="pas" >Set Password</label></td>
+        <td><input type="password" name="pas" id="pas" required></td>
+    </tr>
+    <tr>
+        <td><label for="cpas">Confirm Password</label></td>
+        <td><input type="password" name="cpas" id="cpas" required></td>
+    </tr>
+    <tr>
+        <td><label for="id">ID</label></td>
+        <td><input type="number" name="id" id="id" required></td>
+    </tr>
+    <tr>
+        <td><label for="pno">Phone No.</label></td>
+        <td><input type="number" name="pno" id="pno" required></td>
+    </tr>   
+    <tr>
+        <td><label for="pin">Pin Code</label></td>
+        <td><input type="number" name="" id="pin"></td>
+    </tr> 
+    <tr>
+        <td><label for="city">City</label></td>
+        <td><input type="text" name="" id="city"></td>
+    </tr> 
+    <tr>
+        <td><label for="state">State</label></td>
+        <td><input type="text" name="" id="state"></td>
+    </tr> 
+    <tr>
+        <td><label for="add">Address</label></td>
+        <td><input type="text" name="" id="add"></td>
+    </tr> 
+    </table>
+
+    <br><br>
+    <button type="submit">Submit</button>
+    <button type="reset">Clear</button>
+    </form>
+
+    <script>
+        function validate() {
+            
+            if(document.form.pas.value != document.form.cpas.value) {
+                alert("Please Check Your Password");
+                document.form.cpas.focus();
+                return false;
+            }
+            if(!(document.form.pno.value.match(/^[789]\d{9}$/))) {
+                alert("Enter Valid Phone Number");
+                document.form.pno.focus();
+                return false;
+            }
+
+        }
+
+        
+
+    </script>
+
+</body>
+</html>
